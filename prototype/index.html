@@ -1,0 +1,1846 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>theActCast | Web Design System Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="page-shell">
+     
+
+      <div class="section-filter" aria-label="فلترة الأقسام">
+        <button class="filter-pill active" data-filter="all">الكل</button>
+        <button class="filter-pill" data-filter="system">نظام التصميم</button>
+        <button class="filter-pill" data-filter="auth">المصادقة</button>
+        <button class="filter-pill" data-filter="actor">الممثل</button>
+        <button class="filter-pill" data-filter="company">الشركة</button>
+        <button class="filter-pill" data-filter="shared">المشترك</button>
+      </div>
+
+      <main>
+        <section class="section" id="system" data-group="system">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow" style="background: rgba(60, 64, 49, 0.08); color: var(--olive-700);">Design System</span>
+              <h2>الهوية البصرية والمكوّنات</h2>
+            </div>
+            <p>ألوان، تايبوغرافيا، مسافات، حالات، ومكوّنات قابلة للتحويل مباشرة إلى Angular Components.</p>
+          </div>
+
+          <div class="screen-grid">
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(60, 64, 49, 0.08); color: var(--olive-700);">Core Tokens</span>
+                  <h3>اللوحة اللونية، الخطوط، والمسافات</h3>
+                  <p>اللونان الأساسيان هما <span class="strong">#c1c1c1</span> و <span class="strong">#3c4031</span> مع درجات مساندة هادئة.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="design-grid">
+                  <div class="surface-card">
+                    <h4 class="subsection-title">لوحة الألوان</h4>
+                    <div class="palette-grid">
+                      <div class="swatch dark" style="background: #3c4031;">
+                        <strong>Primary / 700</strong>
+                        <span>#3c4031</span>
+                        <span class="caption" style="color: rgba(249, 248, 245, 0.82);">أزرار، Sidebar، حالات فعالة</span>
+                      </div>
+                      <div class="swatch" style="background: #c1c1c1;">
+                        <strong>Neutral / 400</strong>
+                        <span>#c1c1c1</span>
+                        <span class="caption">عناصر ثانوية وخلفيات مهادنة</span>
+                      </div>
+                      <div class="swatch" style="background: #f7f5f1;">
+                        <strong>Surface</strong>
+                        <span>#f7f5f1</span>
+                        <span class="caption">خلفيات Cards و Forms</span>
+                      </div>
+                      <div class="swatch dark" style="background: #22241d;">
+                        <strong>Text Strong</strong>
+                        <span>#22241d</span>
+                        <span class="caption" style="color: rgba(249, 248, 245, 0.82);">عناوين ومحتوى أساسي</span>
+                      </div>
+                      <div class="swatch" style="background: rgba(79, 122, 87, 0.14);">
+                        <strong>Success</strong>
+                        <span>#4f7a57</span>
+                        <span class="caption">قبول، نجاح، اكتمال</span>
+                      </div>
+                      <div class="swatch" style="background: rgba(154, 106, 46, 0.14);">
+                        <strong>Warning</strong>
+                        <span>#9a6a2e</span>
+                        <span class="caption">تنبيه، انتظار، قرب انتهاء</span>
+                      </div>
+                      <div class="swatch" style="background: rgba(163, 77, 77, 0.14);">
+                        <strong>Error</strong>
+                        <span>#a34d4d</span>
+                        <span class="caption">رفض، خطأ، حذف حرج</span>
+                      </div>
+                      <div class="swatch" style="background: rgba(77, 102, 127, 0.14);">
+                        <strong>Info</strong>
+                        <span>#4d667f</span>
+                        <span class="caption">ذكاء اصطناعي، معلومات، مؤشرات</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="surface-card">
+                    <h4 class="subsection-title">الخط العربي والهيكل</h4>
+                    <div class="list">
+                      <div class="mini-card typography-sample">
+                        <strong style="font-size: 40px; line-height: 1.2;">العنوان الرئيسي H1</strong>
+                        <span class="caption">40px / 700 / Tajawal أو Cairo</span>
+                      </div>
+                      <div class="mini-card typography-sample">
+                        <strong style="font-size: 24px; line-height: 1.3;">عنوان قسم H3</strong>
+                        <span class="caption">24px / 600 / واضح في لوحات الإدارة</span>
+                      </div>
+                      <div class="mini-card typography-sample">
+                        <strong style="font-size: 16px; line-height: 1.7; font-weight: 500;">نص أساسي للقراءة والتفاصيل</strong>
+                        <span class="caption">16px / 400 / line-height 1.7</span>
+                      </div>
+                      <div class="mini-card typography-sample">
+                        <strong style="font-size: 14px; line-height: 1.65; font-weight: 600;">تسميات الحقول والأزرار</strong>
+                        <span class="caption">14-15px / 600 / مسافات 8px-based</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="component-grid">
+                  <div class="component-card">
+                    <h4 class="subsection-title">الأزرار</h4>
+                    <div class="button-row">
+                      <span class="button primary">زر رئيسي</span>
+                      <span class="button outline">زر ثانوي</span>
+                      <span class="button ghost">Ghost</span>
+                      <span class="button danger">حذف</span>
+                    </div>
+                  </div>
+                  <div class="component-card">
+                    <h4 class="subsection-title">الحقول</h4>
+                    <div class="field">
+                      <label>البريد الإلكتروني</label>
+                      <div class="input">name@company.com</div>
+                    </div>
+                    <div class="field" style="margin-top: 12px;">
+                      <label>مدة الفيديو</label>
+                      <div class="input error">22 ثانية</div>
+                      <div class="helper error">المدة يجب أن تكون بين 30 و60 ثانية</div>
+                    </div>
+                  </div>
+                  <div class="component-card">
+                    <h4 class="subsection-title">Chips / Tags</h4>
+                    <div class="chip-row">
+                      <span class="chip active">تمثيل درامي</span>
+                      <span class="chip">لغة إنجليزية</span>
+                      <span class="chip success">متاح</span>
+                      <span class="chip warning">قيد المراجعة</span>
+                      <span class="chip error">محجوز</span>
+                    </div>
+                  </div>
+                  <div class="component-card">
+                    <h4 class="subsection-title">بطاقة ملف شخصي</h4>
+                    <div class="actor-card" style="padding: 0; border: 0; box-shadow: none;">
+                      <div class="portrait"></div>
+                      <div class="badge-stack">
+                        <span class="chip">أكشن</span>
+                        <span class="chip">إعلانات</span>
+                        <span class="chip">28-35</span>
+                      </div>
+                      <h4 style="margin: 14px 0 8px;">ليان السالم</h4>
+                      <p class="small muted">الأردن · 350 د.أ / اليوم</p>
+                    </div>
+                  </div>
+                  <div class="component-card">
+                    <h4 class="subsection-title">Upload Box</h4>
+                    <div class="upload-box">
+                      <strong>اسحب الملفات هنا أو اختر من الجهاز</strong>
+                      <span class="caption">JPG / PNG / MP4 حتى 250MB</span>
+                      <span class="button outline">رفع الآن</span>
+                    </div>
+                  </div>
+                  <div class="component-card">
+                    <h4 class="subsection-title">States</h4>
+                    <div class="list">
+                      <div class="list-item">
+                        <span>Hover</span>
+                        <span class="chip">خلفية #eef1e7</span>
+                      </div>
+                      <div class="list-item">
+                        <span>Active</span>
+                        <span class="chip active">خلفية زيتونية داكنة</span>
+                      </div>
+                      <div class="list-item">
+                        <span>Disabled</span>
+                        <span class="chip muted">تباين منخفض مع منع التفاعل</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+           
+          </div>
+        </section>
+        <section class="section" id="auth" data-group="auth">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow" style="background: rgba(60, 64, 49, 0.08); color: var(--olive-700);">Auth</span>
+              <h2>شاشات المصادقة والتسجيل</h2>
+            </div>
+            <p>واجهات أنيقة ومباشرة مع حالات التحقق واستعادة كلمة المرور وتفريع حسب نوع الحساب.</p>
+          </div>
+
+          <div class="screen-grid">
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(79, 122, 87, 0.12); color: var(--success);">US-01</span>
+                  <h3>تسجيل الممثل متعدد الخطوات</h3>
+                  <p>Wizard من 8 مراحل مع رفع الصور والفيديو، ونجاح نهائي واضح بعد إنشاء الحساب.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="auth-grid">
+                  <div class="auth-visual">
+                    <span class="eyebrow">Profile Completion · 72%</span>
+                    <h3 style="margin: 18px 0 10px; font-size: 32px;">ملفك الشخصي سيظهر للشركات فور اكتمال المتطلبات الأساسية</h3>
+                    <p class="small" style="color: rgba(249, 248, 245, 0.84);">
+                      يتم تقسيم البيانات إلى مراحل مفهومة: حساب، بيانات شخصية، خصائص جسدية، صحة، صور، فيديو، أعمال سابقة، تسعير وصفات.
+                    </p>
+                    <div class="progress">
+                      <div class="progress-track"><div class="progress-fill"></div></div>
+                      <div class="step-row">
+                        <div class="step active"><strong>1</strong><br>الحساب</div>
+                        <div class="step active"><strong>2</strong><br>التفاصيل</div>
+                        <div class="step active"><strong>3</strong><br>الصفات الجسدية</div>
+                        <div class="step"><strong>4</strong><br>الصحة</div>
+                        <div class="step"><strong>5</strong><br>الصور</div>
+                      </div>
+                    </div>
+                    <div class="board">
+                      <h4 class="subsection-title">شاشة نجاح بعد الإكمال</h4>
+                      <div class="list-item" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.08); color: var(--text-inverse);">
+                        <div>
+                          <strong>تم إنشاء الحساب والملف الشخصي بنجاح</strong>
+                          <div class="caption" style="color: rgba(249,248,245,0.72);">يمكنك الآن إدارة التوفر واستقبال طلبات الحجز</div>
+                        </div>
+                        <span class="button secondary">الانتقال للوحة التحكم</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="auth-card">
+                    <div class="step-row">
+                      <span class="chip active">الخطوة 5 من 8</span>
+                      <span class="chip">الصور الإلزامية</span>
+                      <span class="chip">الفيديو لاحقاً</span>
+                    </div>
+                    <div class="forms-grid" style="margin-top: 20px;">
+                      <div class="field">
+                        <label>الاسم الأول</label>
+                        <div class="input">ليان</div>
+                      </div>
+                      <div class="field">
+                        <label>اسم العائلة</label>
+                        <div class="input">السالم</div>
+                      </div>
+                      <div class="field">
+                        <label>البريد الإلكتروني</label>
+                        <div class="input">layan@actcast.app</div>
+                      </div>
+                      <div class="field">
+                        <label>رقم الهاتف</label>
+                        <div class="input">+962 7 9000 3321</div>
+                      </div>
+                      <div class="field">
+                        <label>الجنس</label>
+                        <div class="select">أنثى</div>
+                      </div>
+                      <div class="field">
+                        <label>الدولة</label>
+                        <div class="select">الأردن</div>
+                      </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="gallery">
+                      <div class="upload-box"><strong>صورة أمامية</strong><span class="caption">مطلوبة</span></div>
+                      <div class="upload-box"><strong>صورة جانبية</strong><span class="caption">مطلوبة</span></div>
+                      <div class="upload-box"><strong>نصف الجسم</strong><span class="caption">مطلوبة</span></div>
+                      <div class="upload-box"><strong>كامل الجسم</strong><span class="caption">مطلوبة</span></div>
+                    </div>
+                    <div class="field" style="margin-top: 18px;">
+                      <label>فيديو التعريف</label>
+                      <div class="upload-box media">
+                        <div class="media-preview"></div>
+                        <div>
+                          <strong>ارفع فيديو بين 30 و60 ثانية</strong>
+                          <div class="helper">سيتم فحص المدة تلقائياً قبل الحفظ</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="button-row" style="margin-top: 20px;">
+                      <span class="button primary">حفظ ومتابعة</span>
+                      <span class="button outline">حفظ كمسودة</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(79, 122, 87, 0.12); color: var(--success);">US-01a</span>
+                  <h3>دخول الممثل واستعادة كلمة المرور</h3>
+                  <p>تصميم موحد، أخطاء واضحة، وإعادة تعيين كلمة المرور بخطوات قليلة.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="auth-grid">
+                  <div class="auth-card">
+                    <span class="eyebrow" style="background: rgba(60, 64, 49, 0.08); color: var(--olive-700);">Actor Login</span>
+                    <h4 style="margin: 18px 0 8px; font-size: 30px;">مرحباً بعودتك</h4>
+                    <p class="muted">ادخل إلى ملفك الشخصي، الحجوزات، والمحادثات من نفس اللوحة.</p>
+                    <div class="field" style="margin-top: 22px;">
+                      <label>البريد الإلكتروني</label>
+                      <div class="input">actor@example.com</div>
+                    </div>
+                    <div class="field" style="margin-top: 16px;">
+                      <label>كلمة المرور</label>
+                      <div class="input error">••••••••</div>
+                      <div class="helper error">البريد الإلكتروني أو كلمة المرور غير صحيحة</div>
+                    </div>
+                    <div class="toolbar-row" style="justify-content: space-between; margin-top: 16px;">
+                      <span class="chip muted">إظهار / إخفاء</span>
+                      <a class="small" href="#shared">نسيت كلمة المرور؟</a>
+                    </div>
+                    <div class="button-row" style="margin-top: 20px;">
+                      <span class="button primary">تسجيل الدخول</span>
+                      <span class="button outline">إنشاء حساب جديد</span>
+                    </div>
+                  </div>
+                  <div class="auth-card">
+                    <span class="eyebrow" style="background: rgba(77, 102, 127, 0.12); color: var(--info);">Forgot / Reset</span>
+                    <div class="list">
+                      <div class="detail-card">
+                        <h4 class="subsection-title">نسيت كلمة المرور</h4>
+                        <div class="field">
+                          <label>أدخل بريدك الإلكتروني</label>
+                          <div class="input">actor@example.com</div>
+                          <div class="helper">سنرسل رابط إعادة التعيين خلال لحظات</div>
+                        </div>
+                        <div class="button-row" style="margin-top: 16px;">
+                          <span class="button primary">إرسال الرابط</span>
+                        </div>
+                      </div>
+                      <div class="detail-card">
+                        <h4 class="subsection-title">إعادة تعيين كلمة المرور</h4>
+                        <div class="forms-grid">
+                          <div class="field">
+                            <label>كلمة المرور الجديدة</label>
+                            <div class="input">••••••••</div>
+                          </div>
+                          <div class="field">
+                            <label>تأكيد كلمة المرور</label>
+                            <div class="input">••••••••</div>
+                          </div>
+                        </div>
+                        <div class="helper success" style="margin-top: 10px;">كلمة المرور تستوفي الشروط الأمنية</div>
+                        <div class="button-row" style="margin-top: 16px;">
+                          <span class="button primary">حفظ والدخول</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(79, 122, 87, 0.12); color: var(--success);">US-09 / US-09a</span>
+                  <h3>تسجيل ودخول شركة الإنتاج</h3>
+                  <p>تسجيل منظم للشركات مع الشعار والوصف وروابط الأعمال السابقة، بنفس اللغة البصرية المستخدمة للممثل.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="auth-grid">
+                  <div class="auth-visual">
+                    <span class="eyebrow">Company Onboarding</span>
+                    <h3 style="margin: 18px 0 10px; font-size: 32px;">ابدأ بمشاريعك وابحث عن المواهب بسرعة</h3>
+                    <p class="small" style="color: rgba(249,248,245,0.84);">الوصول السريع إلى البحث، إدارة المشاريع، الذكاء الاصطناعي، والحجوزات الفورية.</p>
+                    <div class="hero-kpis" style="margin-top: 28px;">
+                      <div class="kpi"><strong>3</strong>خطوات للتسجيل</div>
+                      <div class="kpi"><strong>1</strong>لوحة رئيسية موحدة</div>
+                      <div class="kpi"><strong>AI</strong>بحث بالصورة والوصف</div>
+                      <div class="kpi"><strong>24/7</strong>إشعارات ومراسلات</div>
+                    </div>
+                  </div>
+                  <div class="auth-card">
+                    <div class="tab-row">
+                      <span class="chip active">إنشاء حساب شركة</span>
+                      <span class="chip">تسجيل دخول</span>
+                    </div>
+                    <div class="forms-grid" style="margin-top: 20px;">
+                      <div class="field">
+                        <label>اسم المستخدم</label>
+                        <div class="input">مروان الكيلاني</div>
+                      </div>
+                      <div class="field">
+                        <label>اسم الشركة</label>
+                        <div class="input">أفق للإنتاج الإعلامي</div>
+                      </div>
+                      <div class="field">
+                        <label>البريد الإلكتروني</label>
+                        <div class="input">hello@ofuq.media</div>
+                      </div>
+                      <div class="field">
+                        <label>رقم الهاتف</label>
+                        <div class="input">+966 55 440 2000</div>
+                      </div>
+                      <div class="field">
+                        <label>الدولة</label>
+                        <div class="select">السعودية</div>
+                      </div>
+                      <div class="field">
+                        <label>كلمة المرور</label>
+                        <div class="input">••••••••</div>
+                      </div>
+                    </div>
+                    <div class="field" style="margin-top: 16px;">
+                      <label>وصف النشاط</label>
+                      <div class="textarea">شركة متخصصة في الإنتاج الإعلاني والمحتوى الدرامي القصير مع مشاريع خليجية وإقليمية.</div>
+                    </div>
+                    <div class="forms-grid" style="margin-top: 16px;">
+                      <div class="upload-box">
+                        <strong>رفع شعار الشركة</strong>
+                        <span class="caption">PNG / SVG</span>
+                      </div>
+                      <div class="field">
+                        <label>روابط أعمال سابقة</label>
+                        <div class="input">behance.net/ofuq</div>
+                        <div class="input">youtube.com/ofuqfilms</div>
+                        <div class="helper">حقل اختياري</div>
+                      </div>
+                    </div>
+                    <div class="button-row" style="margin-top: 20px;">
+                      <span class="button primary">إنشاء الحساب</span>
+                      <span class="button outline">لدي حساب بالفعل</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="section" id="actor" data-group="actor">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow" style="background: rgba(60, 64, 49, 0.08); color: var(--olive-700);">Actor Experience</span>
+              <h2>لوحات وتجارب الممثل</h2>
+            </div>
+            <p>من إدارة الملف الشخصي إلى التوفر والحجوزات والمحادثات وسجل الأعمال المكتملة.</p>
+          </div>
+
+          <div class="screen-grid">
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(79, 122, 87, 0.12); color: var(--success);">Dashboard</span>
+                  <h3>لوحة الممثل الرئيسية</h3>
+                  <p>صورة شاملة عن الاكتمال، الطلبات الواردة، المواعيد القادمة، والإشعارات.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="app-shell">
+                  <aside class="sidebar">
+                    <div class="sidebar-brand">
+                      <div class="brand-mark">AC</div>
+                      <div>
+                        <strong>ActCast</strong>
+                        <div class="caption" style="color: rgba(249,248,245,0.68);">لوحة الممثل</div>
+                      </div>
+                    </div>
+                    <nav class="nav-list">
+                      <div class="nav-item active">الرئيسية <span>01</span></div>
+                      <div class="nav-item">ملفي الشخصي <span>02</span></div>
+                      <div class="nav-item">التوفر <span>03</span></div>
+                      <div class="nav-item">طلبات الحجز <span>07</span></div>
+                      <div class="nav-item">المحادثات <span>04</span></div>
+                      <div class="nav-item">سجل الأعمال <span>12</span></div>
+                    </nav>
+                  </aside>
+                  <div class="main-area">
+                    <div class="topbar">
+                      <div class="topbar-title">
+                        <h4>مرحباً، ليان</h4>
+                        <span class="caption">آخر تحديث للملف منذ ساعتين</span>
+                      </div>
+                      <div class="topbar-actions">
+                        <div class="search-input">ابحث في الحجوزات أو الرسائل</div>
+                        <div class="toolbar-chip">3 إشعارات</div>
+                        <div class="avatar"></div>
+                      </div>
+                    </div>
+                    <div class="content-area">
+                      <div class="panel" style="margin-bottom: 16px;">
+                        <div class="toolbar-row" style="justify-content: space-between;">
+                          <div>
+                            <h4 style="margin: 0 0 8px;">الملف جاهز للظهور بنسبة 92%</h4>
+                            <p class="muted">تبقّى إضافة فيديو تعريف بدقة أعلى و3 مهارات إضافية لرفع ظهورك في البحث.</p>
+                          </div>
+                          <span class="button primary">إكمال الملف</span>
+                        </div>
+                      </div>
+                      <div class="dashboard-grid">
+                        <div class="stat-card"><span class="caption">طلبات حجز معلقة</span><strong>07</strong></div>
+                        <div class="stat-card"><span class="caption">أيام متاحة هذا الشهر</span><strong>14</strong></div>
+                        <div class="stat-card"><span class="caption">أعمال مكتملة</span><strong>18</strong></div>
+                        <div class="stat-card"><span class="caption">رسائل غير مقروءة</span><strong>05</strong></div>
+                      </div>
+                      <div class="split-grid" style="margin-top: 16px;">
+                        <div class="list-card">
+                          <h4 class="subsection-title">أقرب طلبات الحجز</h4>
+                          <div class="list">
+                            <div class="booking-card">
+                              <div class="toolbar-row" style="justify-content: space-between;">
+                                <div>
+                                  <strong>إعلان موسمي - شركة أفق</strong>
+                                  <div class="caption">12 أبريل · 1,200 د.أ</div>
+                                </div>
+                                <span class="chip warning">بانتظار الرد</span>
+                              </div>
+                            </div>
+                            <div class="booking-card">
+                              <div class="toolbar-row" style="justify-content: space-between;">
+                                <div>
+                                  <strong>مسلسل قصير - مدار ستوديو</strong>
+                                  <div class="caption">18 أبريل · 4 أيام تصوير</div>
+                                </div>
+                                <span class="chip success">تم القبول</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-card">
+                          <h4 class="subsection-title">إشعارات سريعة</h4>
+                          <div class="notification-stack">
+                            <div class="notif-item unread">
+                              <div>
+                                <strong>رسالة جديدة من فريق الإنتاج</strong>
+                                <div class="caption">قبل 3 دقائق</div>
+                              </div>
+                              <span class="chip">جديد</span>
+                            </div>
+                            <div class="notif-item">
+                              <div>
+                                <strong>تم تحديث موعد المشروع "فيلم الرحلة"</strong>
+                                <div class="caption">قبل 40 دقيقة</div>
+                              </div>
+                              <span class="chip muted">مشروع</span>
+                            </div>
+                            <div class="notif-item">
+                              <div>
+                                <strong>الفيديو التعريفي يحتاج ملفاً أوضح</strong>
+                                <div class="caption">تنبيه جودة</div>
+                              </div>
+                              <span class="chip warning">إجراء مطلوب</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(79, 122, 87, 0.12); color: var(--success);">US-02</span>
+                  <h3>الملف الشخصي العام والخاص مع وضع التحرير</h3>
+                  <p>صفحة ملف كاملة مع عرض عام للشركات وتحرير خاص للممثل بشكل Inline وModals منظمة.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="profile-grid">
+                  <div class="profile-card">
+                    <div class="profile-hero">
+                      <div class="portrait"></div>
+                      <div>
+                        <div class="toolbar-row" style="justify-content: space-between;">
+                          <div>
+                            <h4 style="margin: 0;">ليان السالم</h4>
+                            <p class="muted">ممثلة درامية وإعلانية · عمّان، الأردن</p>
+                          </div>
+                          <div class="button-row">
+                            <span class="button primary">تعديل الملف</span>
+                            <span class="button outline">معاينة عامة</span>
+                          </div>
+                        </div>
+                        <div class="chip-row" style="margin: 14px 0 18px;">
+                          <span class="chip">دراما</span>
+                          <span class="chip">إعلانات</span>
+                          <span class="chip">لهجة خليجية</span>
+                          <span class="chip">350 د.أ / اليوم</span>
+                        </div>
+                        <p class="small muted">
+                          ممثلة بخبرة 6 سنوات في الإعلانات والأعمال القصيرة، متاحة للتصوير المحلي والإقليمي مع قدرة على التمثيل أمام الكاميرا وتقديم محتوى تجاري.
+                        </p>
+                        <div class="profile-traits" style="margin-top: 12px;">
+                          <span class="chip muted">طول 172 سم</span>
+                          <span class="chip muted">وزن 58 كجم</span>
+                          <span class="chip muted">لون العين عسلي</span>
+                          <span class="chip muted">رياضة / يوغا</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="gallery">
+                      <div class="portrait"></div>
+                      <div class="portrait"></div>
+                      <div class="portrait"></div>
+                      <div class="portrait"></div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="media-preview"></div>
+                    <div class="toolbar-row" style="justify-content: space-between; margin-top: 14px;">
+                      <span class="helper">فيديو تعريفي 42 ثانية · تم التحقق</span>
+                      <div class="button-row">
+                        <span class="button outline">استبدال</span>
+                        <span class="button danger">حذف</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list">
+                    <div class="detail-card">
+                      <div class="toolbar-row" style="justify-content: space-between;">
+                        <h4 class="subsection-title">معلومات قابلة للتعديل</h4>
+                        <span class="chip success">Auto Save</span>
+                      </div>
+                      <div class="forms-grid">
+                        <div class="field">
+                          <label>الاسم الفني</label>
+                          <div class="input">ليان السالم</div>
+                        </div>
+                        <div class="field">
+                          <label>السعر</label>
+                          <div class="input">350 د.أ / اليوم</div>
+                        </div>
+                        <div class="field">
+                          <label>نبذة تعريفية</label>
+                          <div class="textarea">أركز على الأداء الطبيعي والإعلانات السردية والأدوار الشبابية.</div>
+                        </div>
+                        <div class="field">
+                          <label>البلد</label>
+                          <div class="select">الأردن</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="detail-card">
+                      <h4 class="subsection-title">الأعمال السابقة</h4>
+                      <div class="timeline">
+                        <div class="timeline-item">
+                          <div>
+                            <strong>إعلان بنك إقليمي</strong>
+                            <div class="caption">شركة أفق · ديسمبر 2025</div>
+                          </div>
+                          <span class="chip success">مكتمل</span>
+                        </div>
+                        <div class="timeline-item">
+                          <div>
+                            <strong>فيلم قصير - الطريق</strong>
+                            <div class="caption">ستوديو نوستالجيا · أغسطس 2025</div>
+                          </div>
+                          <span class="chip muted">دراما</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="detail-card">
+                      <h4 class="subsection-title">صحة واختيارات شخصية</h4>
+                      <div class="list">
+                        <div class="list-item"><span>بيانات صحية</span><span class="caption">اختياري ويظهر فقط للإدارة عند الحاجة</span></div>
+                        <div class="list-item"><span>الحساسية</span><span class="caption">لا يوجد</span></div>
+                        <div class="list-item"><span>القيود البدنية</span><span class="caption">غير متوفر</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(79, 122, 87, 0.12); color: var(--success);">US-03 / US-04</span>
+                  <h3>إدارة المهارات والفيديو التعريفي</h3>
+                  <p>واجهة Tags مرنة مع اقتراحات جاهزة، وإدارة فيديو مع استبدال وحذف وتحذيرات المدة.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="split-grid">
+                  <div class="detail-card">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <h4 class="subsection-title">المهارات</h4>
+                      <span class="button outline">إضافة مهارة</span>
+                    </div>
+                    <div class="chip-row">
+                      <span class="chip active">تمثيل درامي</span>
+                      <span class="chip active">إعلانات</span>
+                      <span class="chip active">لهجة خليجية</span>
+                      <span class="chip active">غناء خفيف</span>
+                      <span class="chip active">حركة أمام الكاميرا</span>
+                    </div>
+                    <div class="divider"></div>
+                    <h5 style="margin: 0 0 12px;">مهارات مقترحة</h5>
+                    <div class="chip-row">
+                      <span class="chip">فصحى</span>
+                      <span class="chip">رياضة</span>
+                      <span class="chip">قيادة</span>
+                      <span class="chip">مسرح</span>
+                      <span class="chip">ارتجال</span>
+                    </div>
+                    <div class="field" style="margin-top: 18px;">
+                      <label>إضافة مهارة مخصصة</label>
+                      <div class="pill-input">اكتب مهارة ثم اضغط Enter</div>
+                      <div class="helper">تستخدم هذه البيانات في البحث والفلاتر الذكية</div>
+                    </div>
+                    <div class="list" style="margin-top: 18px;">
+                      <div class="list-item">
+                        <div>
+                          <strong>لهجة خليجية</strong>
+                          <div class="caption">تم تعديلها بواسطة المستخدم</div>
+                        </div>
+                        <div class="button-row">
+                          <span class="button ghost">تعديل</span>
+                          <span class="button danger">حذف</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="detail-card">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <h4 class="subsection-title">الفيديو التعريفي</h4>
+                      <span class="chip success">42 ثانية</span>
+                    </div>
+                    <div class="media-preview"></div>
+                    <div class="list" style="margin-top: 18px;">
+                      <div class="list-item">
+                        <div>
+                          <strong>جودة الفيديو</strong>
+                          <div class="caption">1080p · مقبول للنشر</div>
+                        </div>
+                        <span class="chip success">جاهز</span>
+                      </div>
+                      <div class="list-item">
+                        <div>
+                          <strong>التحقق من المدة</strong>
+                          <div class="caption">ضمن النطاق المسموح 30-60 ثانية</div>
+                        </div>
+                        <span class="chip success">مقبول</span>
+                      </div>
+                    </div>
+                    <div class="button-row" style="margin-top: 18px;">
+                      <span class="button primary">استبدال الفيديو</span>
+                      <span class="button danger" data-modal-trigger="confirmDelete">حذف الفيديو</span>
+                    </div>
+                    <div class="field" style="margin-top: 18px;">
+                      <label>مثال على حالة خطأ</label>
+                      <div class="input error">مدة الملف الحالي: 21 ثانية</div>
+                      <div class="helper error">لن يتم الحفظ حتى يتم رفع فيديو صالح</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(79, 122, 87, 0.12); color: var(--success);">US-05</span>
+                  <h3>إدارة التوفر والتقويم</h3>
+                  <p>عرض شهري وأسبوعي مع حالات محجوز، متاح، وتعطيل إزالة الفترات المرتبطة بحجز نشط.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="calendar-grid">
+                  <div class="calendar-panel">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <h4 class="subsection-title">أبريل 2026</h4>
+                      <div class="button-row">
+                        <span class="button ghost">أسبوعي</span>
+                        <span class="button primary">شهري</span>
+                      </div>
+                    </div>
+                    <div class="calendar">
+                      <div class="weekdays">
+                        <div class="weekday">أحد</div>
+                        <div class="weekday">إثنين</div>
+                        <div class="weekday">ثلاثاء</div>
+                        <div class="weekday">أربعاء</div>
+                        <div class="weekday">خميس</div>
+                        <div class="weekday">جمعة</div>
+                        <div class="weekday">سبت</div>
+                      </div>
+                      <div class="calendar-days">
+                        <div class="day">1</div>
+                        <div class="day available">2</div>
+                        <div class="day booked">3</div>
+                        <div class="day available">4</div>
+                        <div class="day">5</div>
+                        <div class="day available">6</div>
+                        <div class="day booked">7</div>
+                        <div class="day available">8</div>
+                        <div class="day">9</div>
+                        <div class="day available">10</div>
+                        <div class="day">11</div>
+                        <div class="day available">12</div>
+                        <div class="day">13</div>
+                        <div class="day available">14</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-panel">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <h4 class="subsection-title">الفترات المتاحة يوم 12 أبريل</h4>
+                      <span class="button outline">إضافة وقت</span>
+                    </div>
+                    <div class="slots">
+                      <div class="slot">
+                        <span>09:00 - 12:00</span>
+                        <div class="button-row">
+                          <span class="chip success">متاح</span>
+                          <span class="button ghost">تعديل</span>
+                        </div>
+                      </div>
+                      <div class="slot">
+                        <span>13:00 - 16:00</span>
+                        <div class="button-row">
+                          <span class="chip success">متاح</span>
+                          <span class="button ghost">تعديل</span>
+                        </div>
+                      </div>
+                      <div class="slot locked">
+                        <span>17:00 - 20:00</span>
+                        <div class="button-row">
+                          <span class="chip error">مرتبط بحجز نشط</span>
+                          <span class="button ghost">عرض الحجز</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="detail-card" style="margin-top: 18px;">
+                      <h5 style="margin: 0 0 12px;">إضافة توافر جديد</h5>
+                      <div class="forms-grid">
+                        <div class="field">
+                          <label>التاريخ</label>
+                          <div class="input">12 / 04 / 2026</div>
+                        </div>
+                        <div class="field">
+                          <label>الفترة</label>
+                          <div class="input">09:00 - 12:00</div>
+                        </div>
+                      </div>
+                      <div class="button-row" style="margin-top: 16px;">
+                        <span class="button primary">حفظ التوفر</span>
+                        <span class="button outline">إلغاء</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(79, 122, 87, 0.12); color: var(--success);">US-06</span>
+                  <h3>طلبات الحجز والتفاصيل</h3>
+                  <p>قائمة مبوبة مع قبول ورفض وتأكيد إجرائي وتفاصيل المشروع والميزانية داخل نفس التجربة.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="split-grid">
+                  <div class="list-card">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <div class="tab-row">
+                        <span class="chip active">الكل</span>
+                        <span class="chip">معلقة</span>
+                        <span class="chip">مقبولة</span>
+                        <span class="chip">مرفوضة</span>
+                      </div>
+                      <span class="button outline">فرز حسب التاريخ</span>
+                    </div>
+                    <div class="list" style="margin-top: 18px;">
+                      <div class="booking-card">
+                        <div class="toolbar-row" style="justify-content: space-between;">
+                          <div>
+                            <strong>إعلان رمضاني - أفق للإنتاج</strong>
+                            <div class="caption">15 أبريل · يوم تصوير واحد · 1,200 د.أ</div>
+                          </div>
+                          <span class="chip warning">بانتظار الرد</span>
+                        </div>
+                        <div class="button-row" style="margin-top: 14px;">
+                          <span class="button primary">قبول</span>
+                          <span class="button danger" data-modal-trigger="confirmReject">رفض</span>
+                          <span class="button outline">عرض التفاصيل</span>
+                        </div>
+                      </div>
+                      <div class="booking-card">
+                        <div class="toolbar-row" style="justify-content: space-between;">
+                          <div>
+                            <strong>مسلسل قصير - مدار ستوديو</strong>
+                            <div class="caption">22 أبريل · 4 أيام تصوير · 3,400 د.أ</div>
+                          </div>
+                          <span class="chip success">مقبول</span>
+                        </div>
+                      </div>
+                      <div class="booking-card">
+                        <div class="toolbar-row" style="justify-content: space-between;">
+                          <div>
+                            <strong>محتوى رقمي - نيون</strong>
+                            <div class="caption">7 أبريل · 600 د.أ</div>
+                          </div>
+                          <span class="chip error">مرفوض</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="detail-card">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <h4 class="subsection-title">تفاصيل الطلب</h4>
+                      <span class="chip warning">Pending</span>
+                    </div>
+                    <div class="list">
+                      <div class="list-item"><span>المشروع</span><strong>إعلان رمضاني</strong></div>
+                      <div class="list-item"><span>الشركة</span><strong>أفق للإنتاج الإعلامي</strong></div>
+                      <div class="list-item"><span>نوع العمل</span><strong>إعلان تلفزيوني</strong></div>
+                      <div class="list-item"><span>التاريخ</span><strong>15 أبريل 2026</strong></div>
+                      <div class="list-item"><span>المدة</span><strong>9 ساعات</strong></div>
+                      <div class="list-item"><span>السعر المعروض</span><strong>1,200 د.أ</strong></div>
+                      <div class="list-item"><span>الموقع</span><strong>الرياض</strong></div>
+                    </div>
+                    <div class="field" style="margin-top: 18px;">
+                      <label>ملخص الدور</label>
+                      <div class="textarea">دور رئيسي لشخصية شبابية هادئة في حملة ذات طابع عائلي راقٍ، مع مشاهد حوارية خفيفة.</div>
+                    </div>
+                    <div class="button-row" style="margin-top: 18px;">
+                      <span class="button primary">تأكيد القبول</span>
+                      <span class="button danger">تأكيد الرفض</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(79, 122, 87, 0.12); color: var(--success);">US-07</span>
+                  <h3>واجهة المحادثات للممثل</h3>
+                  <p>تجربة رسائل احترافية مع قائمة المحادثات، عداد غير مقروء، مرفقات، ومحفوظات كاملة.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="chat-layout">
+                  <div class="chat-panel">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <h4 class="subsection-title">المحادثات</h4>
+                      <span class="button outline">تصفية غير المقروء</span>
+                    </div>
+                    <div class="conversation-list">
+                      <div class="conversation-item active">
+                        <div>
+                          <strong>أفق للإنتاج</strong>
+                          <div class="caption">هل يناسبك الاجتماع اليوم 6:00 مساءً؟</div>
+                        </div>
+                        <span class="unread">2</span>
+                      </div>
+                      <div class="conversation-item">
+                        <div>
+                          <strong>مدار ستوديو</strong>
+                          <div class="caption">تم إرسال الجدول المحدث</div>
+                        </div>
+                        <span class="chip muted">اليوم</span>
+                      </div>
+                      <div class="conversation-item">
+                        <div>
+                          <strong>نيون للإعلام</strong>
+                          <div class="caption">شكراً لتعاونك في المشروع السابق</div>
+                        </div>
+                        <span class="chip muted">أمس</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat-panel">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <div>
+                        <h4 class="subsection-title">أفق للإنتاج الإعلامي</h4>
+                        <div class="caption">متصل الآن · مشروع إعلان رمضاني</div>
+                      </div>
+                      <div class="button-row">
+                        <span class="button outline">إرفاق ملف</span>
+                        <span class="button ghost">فتح المشروع</span>
+                      </div>
+                    </div>
+                    <div class="messages">
+                      <div class="bubble received">أهلاً ليان، نود تأكيد موعد اجتماع سريع لمراجعة الملابس والتفاصيل.</div>
+                      <div class="bubble sent">مناسب اليوم بين 6 و7 مساءً. هل يمكن إرسال رابط الاجتماع؟</div>
+                      <div class="bubble received">بالتأكيد، سنرسله خلال دقائق مع ملف المراجع البصرية.</div>
+                    </div>
+                    <div class="composer">
+                      <span class="button outline">+</span>
+                      <div class="input">اكتب رسالتك هنا...</div>
+                      <span class="button primary">إرسال</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(79, 122, 87, 0.12); color: var(--success);">US-08</span>
+                  <h3>سجل الأعمال المكتملة</h3>
+                  <p>قسم Portfolio / History يظهر داخل ملف الممثل ويعطي الشركات دليلاً واضحاً على الخبرة السابقة.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="split-grid">
+                  <div class="detail-card">
+                    <h4 class="subsection-title">الخط الزمني للمشاريع</h4>
+                    <div class="timeline">
+                      <div class="timeline-item">
+                        <div>
+                          <strong>إعلان بنك إقليمي</strong>
+                          <div class="caption">شركة أفق · يناير 2026 · دور رئيسي</div>
+                        </div>
+                        <span class="chip success">مكتمل</span>
+                      </div>
+                      <div class="timeline-item">
+                        <div>
+                          <strong>مسلسل قصير - ظل المدينة</strong>
+                          <div class="caption">مدار ستوديو · نوفمبر 2025 · 6 حلقات</div>
+                        </div>
+                        <span class="chip muted">دراما</span>
+                      </div>
+                      <div class="timeline-item">
+                        <div>
+                          <strong>حملة رقمية لمجموعة تجارية</strong>
+                          <div class="caption">نيون · يوليو 2025 · إعلان اجتماعي</div>
+                        </div>
+                        <span class="chip muted">إعلانات</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="detail-card">
+                    <h4 class="subsection-title">عرض بطاقات الأعمال</h4>
+                    <div class="list">
+                      <div class="project-card">
+                        <div class="wide-visual"></div>
+                        <h5 style="margin: 14px 0 8px;">إعلان مصرفي - 2026</h5>
+                        <p class="small muted">شركة أفق · تم عرضه في المنطقة الخليجية · يتضمن معرض صور ومقتطفات.</p>
+                      </div>
+                      <div class="project-card">
+                        <div class="wide-visual"></div>
+                        <h5 style="margin: 14px 0 8px;">فيلم قصير - الطريق</h5>
+                        <p class="small muted">ستوديو نوستالجيا · عمل مستقل · دور ثانوي مؤثر.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="section" id="company" data-group="company">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow" style="background: rgba(60, 64, 49, 0.08); color: var(--olive-700);">Company Experience</span>
+              <h2>لوحات وتجارب شركة الإنتاج</h2>
+            </div>
+            <p>بحث، مشاريع، ذكاء اصطناعي، ملفات ممثلين، طلبات حجز، ورسائل تشغيلية.</p>
+          </div>
+
+          <div class="screen-grid">
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(77, 102, 127, 0.12); color: var(--info);">Company Dashboard</span>
+                  <h3>لوحة الشركة الرئيسية</h3>
+                  <p>تركيز على المشاريع النشطة، الطلبات المفتوحة، أفضل المرشحين، والتنبيهات التشغيلية.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="app-shell">
+                  <aside class="sidebar">
+                    <div class="sidebar-brand">
+                      <div class="brand-mark">OF</div>
+                      <div>
+                        <strong>أفق للإنتاج</strong>
+                        <div class="caption" style="color: rgba(249,248,245,0.68);">لوحة الشركة</div>
+                      </div>
+                    </div>
+                    <nav class="nav-list">
+                      <div class="nav-item active">الرئيسية <span>01</span></div>
+                      <div class="nav-item">المشاريع <span>06</span></div>
+                      <div class="nav-item">البحث عن ممثلين <span>32</span></div>
+                      <div class="nav-item">البحث الذكي <span>AI</span></div>
+                      <div class="nav-item">الطلبات <span>11</span></div>
+                      <div class="nav-item">الدردشة <span>08</span></div>
+                    </nav>
+                  </aside>
+                  <div class="main-area">
+                    <div class="topbar">
+                      <div class="topbar-title">
+                        <h4>ملخص العمليات اليوم</h4>
+                        <span class="caption">آخر مزامنة للفرق والرسائل قبل 5 دقائق</span>
+                      </div>
+                      <div class="topbar-actions">
+                        <div class="search-input">ابحث عن مشروع أو ممثل</div>
+                        <div class="toolbar-chip">11 إشعار</div>
+                        <div class="logo"></div>
+                      </div>
+                    </div>
+                    <div class="content-area">
+                      <div class="dashboard-grid">
+                        <div class="stat-card"><span class="caption">مشاريع نشطة</span><strong>06</strong></div>
+                        <div class="stat-card"><span class="caption">طلبات قيد الرد</span><strong>11</strong></div>
+                        <div class="stat-card"><span class="caption">مرشحون محفوظون</span><strong>48</strong></div>
+                        <div class="stat-card"><span class="caption">رسائل جديدة</span><strong>08</strong></div>
+                      </div>
+                      <div class="project-grid" style="margin-top: 16px;">
+                        <div class="detail-card">
+                          <div class="toolbar-row" style="justify-content: space-between;">
+                            <h4 class="subsection-title">مشاريع تتطلب ترشيحاً سريعاً</h4>
+                            <span class="button primary">إنشاء مشروع</span>
+                          </div>
+                          <div class="list">
+                            <div class="project-card">
+                              <div class="toolbar-row" style="justify-content: space-between;">
+                                <div>
+                                  <strong>إعلان رمضاني 2026</strong>
+                                  <div class="caption">إعلان تلفزيوني · الرياض · يبدأ خلال 14 يوماً</div>
+                                </div>
+                                <span class="chip warning">مرشحون ناقصون</span>
+                              </div>
+                            </div>
+                            <div class="project-card">
+                              <div class="toolbar-row" style="justify-content: space-between;">
+                                <div>
+                                  <strong>سلسلة وثائقية قصيرة</strong>
+                                  <div class="caption">3 حلقات · عمّان · البحث عن شخصيات ثانوية</div>
+                                </div>
+                                <span class="chip success">مستقر</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="detail-card">
+                          <h4 class="subsection-title">تنبيهات الفريق</h4>
+                          <div class="notification-stack">
+                            <div class="notif-item unread">
+                              <div>
+                                <strong>ليان السالم قبلت طلب الحجز</strong>
+                                <div class="caption">إعلان رمضاني · قبل 3 دقائق</div>
+                              </div>
+                              <span class="chip success">تم</span>
+                            </div>
+                            <div class="notif-item">
+                              <div>
+                                <strong>تعديل على مشروع "ظل المدينة"</strong>
+                                <div class="caption">تم إشعار جميع الممثلين المرتبطين</div>
+                              </div>
+                              <span class="chip muted">Project</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(77, 102, 127, 0.12); color: var(--info);">US-10</span>
+                  <h3>إنشاء مشروع وإدارته</h3>
+                  <p>نموذج مشروع واضح مع حفظ، تعديل، حذف، وربط مباشر بطلبات الحجز والتنبيهات.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="project-grid">
+                  <div class="detail-card">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <h4 class="subsection-title">إنشاء مشروع جديد</h4>
+                      <span class="chip active">Draft</span>
+                    </div>
+                    <div class="forms-grid">
+                      <div class="field">
+                        <label>اسم المشروع</label>
+                        <div class="input">إعلان رمضاني 2026</div>
+                      </div>
+                      <div class="field">
+                        <label>نوع المشروع</label>
+                        <div class="select">إعلان تلفزيوني</div>
+                      </div>
+                      <div class="field">
+                        <label>الدولة / المدينة</label>
+                        <div class="input">السعودية · الرياض</div>
+                      </div>
+                      <div class="field">
+                        <label>جدول التصوير</label>
+                        <div class="input">15 - 18 أبريل 2026</div>
+                      </div>
+                    </div>
+                    <div class="field" style="margin-top: 16px;">
+                      <label>الوصف</label>
+                      <div class="textarea">حملة مرئية لعائلة خليجية مع طابع دفء وثقة، نحتاج ممثلة رئيسية وشخصيتين ثانويتين.</div>
+                    </div>
+                    <div class="button-row" style="margin-top: 18px;">
+                      <span class="button primary">حفظ المشروع</span>
+                      <span class="button outline">معاينة</span>
+                      <span class="button danger" data-modal-trigger="confirmDelete">حذف المشروع</span>
+                    </div>
+                  </div>
+                  <div class="list">
+                    <div class="detail-card">
+                      <h4 class="subsection-title">قائمة المشاريع</h4>
+                      <div class="list">
+                        <div class="list-item">
+                          <div>
+                            <strong>إعلان رمضاني 2026</strong>
+                            <div class="caption">تم تحديثه منذ 5 دقائق</div>
+                          </div>
+                          <span class="chip warning">قيد الاختيار</span>
+                        </div>
+                        <div class="list-item">
+                          <div>
+                            <strong>ظل المدينة</strong>
+                            <div class="caption">مسلسل قصير · 7 ممثلين مرتبطين</div>
+                          </div>
+                          <span class="chip success">نشط</span>
+                        </div>
+                        <div class="list-item">
+                          <div>
+                            <strong>حملة صيفية</strong>
+                            <div class="caption">منتهٍ · محفوظ للأرشيف</div>
+                          </div>
+                          <span class="chip muted">Archived</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="detail-card">
+                      <h4 class="subsection-title">تفاصيل المشروع</h4>
+                      <div class="table">
+                        <div class="list-item"><span>حالة المشروع</span><strong>قيد الاختيار</strong></div>
+                        <div class="list-item"><span>الممثلون المرتبطون</span><strong>3 مرشحين</strong></div>
+                        <div class="list-item"><span>الإشعارات المرتبطة</span><strong>تم إرسال 2</strong></div>
+                        <div class="list-item"><span>آخر تعديل</span><strong>اليوم 10:24</strong></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(77, 102, 127, 0.12); color: var(--info);">US-11</span>
+                  <h3>البحث عن الممثلين</h3>
+                  <p>شاشة قوية تجمع البحث النصي، الفلاتر المتقدمة، الفرز، البطاقات، والحفظ السريع.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="search-grid">
+                  <div class="detail-card">
+                    <h4 class="subsection-title">الفلاتر</h4>
+                    <div class="field">
+                      <label>اسم الممثل</label>
+                      <div class="input">ليان</div>
+                    </div>
+                    <div class="field" style="margin-top: 14px;">
+                      <label>المهارات</label>
+                      <div class="chip-row">
+                        <span class="chip active">إعلانات</span>
+                        <span class="chip active">لهجة خليجية</span>
+                        <span class="chip">أكشن</span>
+                        <span class="chip">مسرح</span>
+                      </div>
+                    </div>
+                    <div class="forms-grid" style="margin-top: 14px;">
+                      <div class="field">
+                        <label>الجنس</label>
+                        <div class="select">أنثى</div>
+                      </div>
+                      <div class="field">
+                        <label>الميزانية</label>
+                        <div class="input">250 - 500 د.أ</div>
+                      </div>
+                    </div>
+                    <div class="field" style="margin-top: 14px;">
+                      <label>الخصائص</label>
+                      <div class="chip-row">
+                        <span class="chip">شبابي</span>
+                        <span class="chip">طويل</span>
+                        <span class="chip">رياضي</span>
+                      </div>
+                    </div>
+                    <div class="button-row" style="margin-top: 18px;">
+                      <span class="button primary">تطبيق الفلاتر</span>
+                      <span class="button outline">إعادة تعيين</span>
+                    </div>
+                  </div>
+                  <div class="detail-card">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <div class="chip-row">
+                        <span class="chip active">أفضل تطابق</span>
+                        <span class="chip">الأحدث</span>
+                        <span class="chip">الأقل سعراً</span>
+                      </div>
+                      <span class="chip muted">128 نتيجة</span>
+                    </div>
+                    <div class="card-grid" style="margin-top: 18px;">
+                      <div class="actor-card">
+                        <div class="portrait"></div>
+                        <div class="toolbar-row" style="justify-content: space-between;">
+                          <div>
+                            <strong>ليان السالم</strong>
+                            <div class="caption">الأردن · 350 د.أ / اليوم</div>
+                          </div>
+                          <span class="result-score">96%</span>
+                        </div>
+                        <div class="chip-row" style="margin: 12px 0;">
+                          <span class="chip">إعلانات</span>
+                          <span class="chip">دراما</span>
+                          <span class="chip">خليجي</span>
+                        </div>
+                        <div class="button-row">
+                          <span class="button primary">عرض الملف</span>
+                          <span class="button outline">إرسال طلب</span>
+                          <span class="button ghost">حفظ</span>
+                        </div>
+                      </div>
+                      <div class="actor-card">
+                        <div class="portrait"></div>
+                        <div class="toolbar-row" style="justify-content: space-between;">
+                          <div>
+                            <strong>سالم الجابري</strong>
+                            <div class="caption">الإمارات · 420 د.أ / اليوم</div>
+                          </div>
+                          <span class="result-score">91%</span>
+                        </div>
+                        <div class="chip-row" style="margin: 12px 0;">
+                          <span class="chip">رياضي</span>
+                          <span class="chip">أكشن</span>
+                        </div>
+                        <div class="button-row">
+                          <span class="button primary">عرض الملف</span>
+                          <span class="button outline">إرسال طلب</span>
+                        </div>
+                      </div>
+                      <div class="actor-card">
+                        <div class="portrait"></div>
+                        <div class="toolbar-row" style="justify-content: space-between;">
+                          <div>
+                            <strong>نور الدليمي</strong>
+                            <div class="caption">العراق · 280 د.أ / اليوم</div>
+                          </div>
+                          <span class="result-score">88%</span>
+                        </div>
+                        <div class="chip-row" style="margin: 12px 0;">
+                          <span class="chip">مسرح</span>
+                          <span class="chip">إعلانات</span>
+                        </div>
+                        <div class="button-row">
+                          <span class="button primary">عرض الملف</span>
+                          <span class="button outline">إرسال طلب</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="state-card" style="margin-top: 16px;">
+                      <div class="state-icon"></div>
+                      <h4 style="margin: 0 0 10px;">حالة فارغة عند عدم وجود نتائج</h4>
+                      <p class="muted">جرّب توسيع الميزانية أو إزالة أحد الفلاتر لتظهر نتائج أكثر.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(77, 102, 127, 0.12); color: var(--info);">Public Profile + Booking</span>
+                  <h3>ملف الممثل العام وإرسال طلب الحجز</h3>
+                  <p>الشركة ترى ملفاً عاماً شاملاً ثم تطلق طلب الحجز ضمن تدفق واضح مرتبط بمشروع محدد.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="split-grid">
+                  <div class="profile-card">
+                    <div class="profile-hero">
+                      <div class="portrait"></div>
+                      <div>
+                        <div class="toolbar-row" style="justify-content: space-between;">
+                          <div>
+                            <h4 style="margin: 0;">ليان السالم</h4>
+                            <p class="muted">الأردن · 350 د.أ / اليوم · متاحة هذا الأسبوع</p>
+                          </div>
+                          <div class="button-row">
+                            <span class="button primary">إرسال طلب حجز</span>
+                            <span class="button outline">حفظ</span>
+                          </div>
+                        </div>
+                        <div class="chip-row" style="margin-top: 14px;">
+                          <span class="chip">إعلانات</span>
+                          <span class="chip">دراما</span>
+                          <span class="chip">لهجة خليجية</span>
+                          <span class="chip success">متاحة</span>
+                        </div>
+                        <p class="small muted" style="margin-top: 14px;">
+                          ملف عام يعرض الصور الأساسية، الفيديو التعريفي، المهارات، وسجل الأعمال المكتملة مع أوقات التوفر المسموح مشاركتها.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="gallery">
+                      <div class="portrait"></div>
+                      <div class="portrait"></div>
+                      <div class="portrait"></div>
+                      <div class="portrait"></div>
+                    </div>
+                  </div>
+                  <div class="detail-card">
+                    <h4 class="subsection-title">تدفق إرسال الطلب</h4>
+                    <div class="step-row">
+                      <div class="step active"><strong>1</strong><br>اختيار المشروع</div>
+                      <div class="step active"><strong>2</strong><br>الموعد والسعر</div>
+                      <div class="step"><strong>3</strong><br>مراجعة وإرسال</div>
+                    </div>
+                    <div class="field" style="margin-top: 18px;">
+                      <label>المشروع</label>
+                      <div class="select">إعلان رمضاني 2026</div>
+                    </div>
+                    <div class="forms-grid" style="margin-top: 14px;">
+                      <div class="field">
+                        <label>تاريخ التصوير</label>
+                        <div class="input">15 / 04 / 2026</div>
+                      </div>
+                      <div class="field">
+                        <label>السعر المقترح</label>
+                        <div class="input">1,200 د.أ</div>
+                      </div>
+                    </div>
+                    <div class="field" style="margin-top: 14px;">
+                      <label>ملاحظات للشخصية</label>
+                      <div class="textarea">نبحث عن أداء دافئ وهادئ مع حضور قوي أمام الكاميرا.</div>
+                    </div>
+                    <div class="list-item" style="margin-top: 16px;">
+                      <div>
+                        <strong>التحقق من التوفر</strong>
+                        <div class="caption">15 أبريل متاح بالكامل</div>
+                      </div>
+                      <span class="chip success">جاهز للإرسال</span>
+                    </div>
+                    <div class="button-row" style="margin-top: 18px;">
+                      <span class="button primary">إرسال الطلب</span>
+                      <span class="button outline">حفظ كمسودة</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(77, 102, 127, 0.12); color: var(--info);">US-12</span>
+                  <h3>البحث بالذكاء الاصطناعي</h3>
+                  <p>وضعان واضحان: رفع صورة أو وصف نصي، مع نتائج قائمة على درجة التشابه وتجربة متقدمة لكنها قابلة للتطبيق.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="split-grid">
+                  <div class="detail-card">
+                    <div class="tab-row">
+                      <span class="chip active">رفع صورة</span>
+                      <span class="chip">وصف نصي</span>
+                    </div>
+                    <div class="upload-box media" style="margin-top: 18px;">
+                      <div class="wide-visual"></div>
+                      <div>
+                        <strong>ارفع مرجعاً بصرياً للشخصية المطلوبة</strong>
+                        <div class="helper">سيتم تحليل السمات الشكلية وإظهار ممثلين مشابهين</div>
+                      </div>
+                    </div>
+                    <div class="field" style="margin-top: 18px;">
+                      <label>وصف إضافي</label>
+                      <div class="textarea">شخصية شابة، طول متوسط إلى طويل، حضور هادئ وملامح قريبة من الحملات العائلية الراقية.</div>
+                    </div>
+                    <div class="button-row" style="margin-top: 18px;">
+                      <span class="button primary">ابدأ التحليل</span>
+                      <span class="button outline">استخدام وصف فقط</span>
+                    </div>
+                  </div>
+                  <div class="detail-card">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <h4 class="subsection-title">أفضل النتائج</h4>
+                      <span class="chip">تم الترتيب حسب التشابه</span>
+                    </div>
+                    <div class="list">
+                      <div class="actor-card">
+                        <div class="toolbar-row" style="justify-content: space-between;">
+                          <div>
+                            <strong>ليان السالم</strong>
+                            <div class="caption">ملامح قريبة + خبرة إعلانات</div>
+                          </div>
+                          <span class="result-score">98%</span>
+                        </div>
+                      </div>
+                      <div class="actor-card">
+                        <div class="toolbar-row" style="justify-content: space-between;">
+                          <div>
+                            <strong>سمر يونس</strong>
+                            <div class="caption">تشابه بصري مرتفع + عمر مناسب</div>
+                          </div>
+                          <span class="result-score">91%</span>
+                        </div>
+                      </div>
+                      <div class="actor-card">
+                        <div class="toolbar-row" style="justify-content: space-between;">
+                          <div>
+                            <strong>ريم الخطيب</strong>
+                            <div class="caption">تشابه متوسط مع توفر أعلى</div>
+                          </div>
+                          <span class="result-score">84%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="helper" style="margin-top: 16px;">يمكن لاحقاً توسيع هذه الشاشة لعرض أسباب التطابق وسمات التحليل المرئي.</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(77, 102, 127, 0.12); color: var(--info);">Company Chat</span>
+                  <h3>واجهة المحادثات للشركة</h3>
+                  <p>تجربة مشابهة للممثل مع ربط الرسائل بالمشروع والحالة التشغيلية وإمكانية الرجوع للمحادثات المؤرشفة.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="chat-layout">
+                  <div class="chat-panel">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <h4 class="subsection-title">المحادثات النشطة</h4>
+                      <span class="chip muted">08</span>
+                    </div>
+                    <div class="conversation-list">
+                      <div class="conversation-item active">
+                        <div>
+                          <strong>ليان السالم</strong>
+                          <div class="caption">تمت الموافقة على الموعد المبدئي</div>
+                        </div>
+                        <span class="unread">1</span>
+                      </div>
+                      <div class="conversation-item">
+                        <div>
+                          <strong>سالم الجابري</strong>
+                          <div class="caption">يراجع تفاصيل الشخصية حالياً</div>
+                        </div>
+                        <span class="chip muted">اليوم</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat-panel">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <div>
+                        <h4 class="subsection-title">محادثة ليان السالم</h4>
+                        <div class="caption">مرتبط بالمشروع: إعلان رمضاني 2026</div>
+                      </div>
+                      <span class="button outline">عرض الملف الشخصي</span>
+                    </div>
+                    <div class="messages">
+                      <div class="bubble sent">أرسلنا رابط الاجتماع والمرجع البصري. ننتظر تأكيدك النهائي.</div>
+                      <div class="bubble received">تم الاستلام، سأراجع وأؤكد خلال ساعة.</div>
+                      <div class="bubble sent">ممتاز، وسنشارك معك موقع التصوير النهائي بعد التثبيت.</div>
+                    </div>
+                    <div class="composer">
+                      <span class="button outline">+</span>
+                      <div class="input">اكتب تعليمات أو تفاصيل إضافية...</div>
+                      <span class="button primary">إرسال</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="section" id="shared" data-group="shared">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow" style="background: rgba(60, 64, 49, 0.08); color: var(--olive-700);">Shared Modules</span>
+              <h2>الإشعارات، الإعدادات، الحالات، والمدير</h2>
+            </div>
+            <p>وحدات عابرة للمنصة تدعم الممثل والشركة والإدارة وتؤسس لتوسعة المدفوعات والفعاليات لاحقاً.</p>
+          </div>
+
+          <div class="screen-grid">
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(60, 64, 49, 0.08); color: var(--olive-700);">Notifications</span>
+                  <h3>مركز الإشعارات والإشراف الإداري</h3>
+                  <p>تنبيهات فورية للحجوزات والرسائل وتغييرات المشاريع، مع منظور إداري لمراقبة المحادثات.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="split-grid">
+                  <div class="detail-card">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <h4 class="subsection-title">مركز الإشعارات</h4>
+                      <div class="tab-row">
+                        <span class="chip active">الكل</span>
+                        <span class="chip">رسائل</span>
+                        <span class="chip">حجوزات</span>
+                        <span class="chip">نظام</span>
+                      </div>
+                    </div>
+                    <div class="notification-stack">
+                      <div class="notif-item unread">
+                        <div>
+                          <strong>تم قبول طلب الحجز من ليان السالم</strong>
+                          <div class="caption">إعلان رمضاني 2026 · قبل 3 دقائق</div>
+                        </div>
+                        <span class="chip success">Accepted</span>
+                      </div>
+                      <div class="notif-item">
+                        <div>
+                          <strong>وصول رسالة جديدة من فريق الإنتاج</strong>
+                          <div class="caption">محادثة مرتبطة بالمشروع الحالي</div>
+                        </div>
+                        <span class="chip">Chat</span>
+                      </div>
+                      <div class="notif-item">
+                        <div>
+                          <strong>تم تعديل جدول تصوير مشروع "ظل المدينة"</strong>
+                          <div class="caption">تم إشعار جميع الأطراف تلقائياً</div>
+                        </div>
+                        <span class="chip warning">Update</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="detail-card">
+                    <h4 class="subsection-title">مرجع إداري</h4>
+                    <div class="list">
+                      <div class="list-item">
+                        <div>
+                          <strong>مراقبة المحادثات</strong>
+                          <div class="caption">الوصول الكامل محفوظ لفريق الإدارة فقط لأغراض السلامة والامتثال</div>
+                        </div>
+                        <span class="button outline">فتح السجل</span>
+                      </div>
+                      <div class="list-item">
+                        <div>
+                          <strong>تنبيهات النظام</strong>
+                          <div class="caption">أخطاء رفع ملفات، شكاوى، أو إساءة استخدام</div>
+                        </div>
+                        <span class="chip error">3 حالات</span>
+                      </div>
+                      <div class="list-item">
+                        <div>
+                          <strong>استعداد مستقبلي للمدفوعات والفعاليات</strong>
+                          <div class="caption">بطاقات إشعار للمدفوعات المجدولة والأحداث القادمة</div>
+                        </div>
+                        <span class="chip muted">Roadmap Ready</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(60, 64, 49, 0.08); color: var(--olive-700);">Settings + Payments</span>
+                  <h3>الإعدادات وإدارة الملف والمدفوعات المرجعية</h3>
+                  <p>إعدادات مشتركة تشمل الحساب، التفضيلات، الأمان، وربط واجهات مالية احترافية عند الحاجة.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="settings-grid">
+                  <div class="detail-card">
+                    <h4 class="subsection-title">قائمة الإعدادات</h4>
+                    <div class="list">
+                      <div class="list-item"><span>الملف الشخصي</span><span class="chip active">نشط</span></div>
+                      <div class="list-item"><span>الأمان وكلمة المرور</span><span class="chip muted">2FA</span></div>
+                      <div class="list-item"><span>الإشعارات</span><span class="chip muted">Email + Push</span></div>
+                      <div class="list-item"><span>المدفوعات والفواتير</span><span class="chip muted">قريباً</span></div>
+                      <div class="list-item"><span>اللغة والاتجاه</span><span class="chip muted">العربية RTL</span></div>
+                    </div>
+                  </div>
+                  <div class="detail-card">
+                    <div class="toolbar-row" style="justify-content: space-between;">
+                      <h4 class="subsection-title">إدارة الحساب</h4>
+                      <span class="button primary">حفظ التغييرات</span>
+                    </div>
+                    <div class="forms-grid">
+                      <div class="field">
+                        <label>اسم العرض</label>
+                        <div class="input">أفق للإنتاج الإعلامي</div>
+                      </div>
+                      <div class="field">
+                        <label>البريد</label>
+                        <div class="input">hello@ofuq.media</div>
+                      </div>
+                      <div class="field">
+                        <label>رقم الهاتف</label>
+                        <div class="input">+966 55 440 2000</div>
+                      </div>
+                      <div class="field">
+                        <label>المنطقة الزمنية</label>
+                        <div class="select">Asia/Riyadh</div>
+                      </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="project-grid">
+                      <div class="settings-card">
+                        <h5 style="margin: 0 0 10px;">الفواتير والمدفوعات</h5>
+                        <div class="list">
+                          <div class="list-item"><span>فاتورة #INV-3021</span><strong>2,100 د.أ</strong></div>
+                          <div class="list-item"><span>الحالة</span><span class="chip success">مدفوعة</span></div>
+                          <div class="list-item"><span>المرجع</span><strong>TXN-9A22F</strong></div>
+                        </div>
+                      </div>
+                      <div class="settings-card">
+                        <h5 style="margin: 0 0 10px;">أحداث قادمة</h5>
+                        <div class="list">
+                          <div class="list-item"><span>جلسة اختيار ممثلين</span><strong>18 أبريل</strong></div>
+                          <div class="list-item"><span>اجتماع فريق الإخراج</span><strong>22 أبريل</strong></div>
+                          <div class="list-item"><span>تجديد اشتراك Pro</span><strong>1 مايو</strong></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="screen">
+              <div class="screen-head">
+                <div>
+                  <span class="eyebrow" style="background: rgba(60, 64, 49, 0.08); color: var(--olive-700);">States + Modal</span>
+                  <h3>الحالات المشتركة ورسائل النجاح والخطأ والتأكيد</h3>
+                  <p>تغطي الحالات الفارغة، التحميل، الأخطاء، والعمليات الحساسة لتفادي أي لبس في التجربة.</p>
+                </div>
+              </div>
+              <div class="screen-body">
+                <div class="states-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
+                  <div class="state-card">
+                    <div class="state-icon"></div>
+                    <h4 style="margin: 0 0 10px;">لا توجد نتائج</h4>
+                    <p class="muted">لم يتم العثور على ممثلين يطابقون هذه الفلاتر.</p>
+                    <span class="button outline">توسيع البحث</span>
+                  </div>
+                  <div class="state-card">
+                    <div class="state-icon"></div>
+                    <h4 style="margin: 0 0 10px;">حدث خطأ في الرفع</h4>
+                    <p class="muted">فشل رفع الفيديو. يرجى التأكد من الحجم أو الاتصال ثم إعادة المحاولة.</p>
+                    <span class="button danger">إعادة المحاولة</span>
+                  </div>
+                  <div class="state-card">
+                    <div class="state-icon"></div>
+                    <h4 style="margin: 0 0 10px;">تم الحفظ بنجاح</h4>
+                    <p class="muted">تم تحديث الملف الشخصي وستظهر التغييرات فوراً في العرض العام.</p>
+                    <span class="button primary">متابعة</span>
+                  </div>
+                </div>
+                <div class="detail-card" style="margin-top: 20px;">
+                  <div class="toolbar-row" style="justify-content: space-between;">
+                    <h4 class="subsection-title">Skeleton / Loading Guidance</h4>
+                    <span class="button outline">استخدم نفس أحجام البطاقات</span>
+                  </div>
+                  <div class="card-grid">
+                    <div class="mini-card">
+                      <div class="mini-visual"></div>
+                      <div class="mini-visual" style="margin-top: 12px; min-height: 16px;"></div>
+                      <div class="mini-visual" style="margin-top: 8px; min-height: 12px;"></div>
+                    </div>
+                    <div class="mini-card">
+                      <div class="mini-visual"></div>
+                      <div class="mini-visual" style="margin-top: 12px; min-height: 16px;"></div>
+                      <div class="mini-visual" style="margin-top: 8px; min-height: 12px;"></div>
+                    </div>
+                    <div class="mini-card">
+                      <div class="mini-visual"></div>
+                      <div class="mini-visual" style="margin-top: 12px; min-height: 16px;"></div>
+                      <div class="mini-visual" style="margin-top: 8px; min-height: 12px;"></div>
+                    </div>
+                  </div>
+                  <div class="button-row" style="margin-top: 20px;">
+                    <span class="button primary" data-modal-trigger="confirmDelete">فتح Modal تأكيد</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal-overlay" id="confirmDelete" role="dialog" aria-modal="true" aria-labelledby="confirmDeleteTitle">
+      <div class="modal-card">
+        <div class="toolbar-row" style="justify-content: space-between;">
+          <h4 id="confirmDeleteTitle" class="subsection-title">تأكيد إجراء حساس</h4>
+          <button class="button ghost" data-modal-close>إغلاق</button>
+        </div>
+        <p class="muted">هل أنت متأكد من المتابعة؟ هذا الإجراء مناسب لحذف فيديو أو مشروع أو رفض طلب حجز بعد المراجعة.</p>
+        <div class="list-item">
+          <div>
+            <strong>سلوك موصى به</strong>
+            <div class="caption">أظهر الأثر المتوقع، ووفّر مسار تراجع واضح عند الإمكان.</div>
+          </div>
+          <span class="chip error">Critical</span>
+        </div>
+        <div class="button-row" style="margin-top: 20px;">
+          <button class="button danger">تأكيد الحذف</button>
+          <button class="button outline" data-modal-close>إلغاء</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="confirmReject" role="dialog" aria-modal="true" aria-labelledby="confirmRejectTitle">
+      <div class="modal-card">
+        <div class="toolbar-row" style="justify-content: space-between;">
+          <h4 id="confirmRejectTitle" class="subsection-title">تأكيد رفض الطلب</h4>
+          <button class="button ghost" data-modal-close>إغلاق</button>
+        </div>
+        <p class="muted">سيتم تحديث الحالة فوراً وإشعار شركة الإنتاج بسبب الرفض إذا تم إدخال ملاحظة.</p>
+        <div class="field">
+          <label>ملاحظة اختيارية</label>
+          <div class="textarea">التاريخ يتعارض مع التزام حالي، يرجى اقتراح موعد بديل.</div>
+        </div>
+        <div class="button-row" style="margin-top: 20px;">
+          <button class="button danger">تأكيد الرفض</button>
+          <button class="button outline" data-modal-close>إلغاء</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
